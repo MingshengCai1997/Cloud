@@ -1,0 +1,12 @@
+server:
+  port: 8004
+
+# zookeeper在哪里，然后将自己连上去
+# 服务别名，注册zookeeper到注册中心的名称
+spring:
+  application:
+    # 叫什么就会注册进去什么，注册成功之后会多一个service节点，这个节点中存的就是这个
+    name: cloud-provider-payment
+  cloud:
+    zookeeper:
+      connect-string: 192.168.10.132:2181
